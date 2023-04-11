@@ -49,11 +49,25 @@ function App() {
         <Text text={'e'} pos={[10, -4, -10]} rot={1} />
         <Text text={'r'} pos={[12, -4.25, -10]} rot={1} />
         <ModelViewer scale="100" modelPath={"/images/3d/Donut/donut.glb"} />
-        <LogoCube path={"./assets/react-logo.svg"} pos={[-9, -7, 0]}/>
-        <LogoCube path={"./assets/react-logo.svg"} pos={[-9, -7, 0]}/>
-        <LogoCube path={"./assets/react-logo.svg"} pos={[-9, -7, 0]}/>
-        <LogoCube path={"./assets/react-logo.svg"} pos={[-9, -7, 0]}/>
-        <LogoCube path={"./assets/react-logo.svg"} pos={[-9, -7, 0]}/>
+      </Canvas>
+      <Canvas
+        style={{ color: '#00000', height: '400px', width: '100vw' }}
+        onCreated={handleCanvasCreated}
+        camera={{ fov: 10, position: [0, 0, 15] }}
+      >
+        <Background />
+        <directionalLight position={[10, 10, 10]} />
+        <ambientLight intensity={0.3} />
+        <LogoCube path={'assets/python-logo.svg.png'} pos={[-4, 0.5, -2]}/>
+        <LogoCube path={'assets/numpy-logo.png'} pos={[-4, -0.5, -2]}/>
+        <LogoCube path={'assets/html-logo.png'} pos={[-2, 0.5, -2]}/>
+        <LogoCube path={'assets/css-logo.png'} pos={[-2, -0.5, -2]}/>
+        <LogoCube path={'assets/nodejs-logo.png'} pos={[0, 0.5, -2]}/>
+        <LogoCube path={'assets/react-logo.png'} pos={[0, -0.5, -2]}/>
+        <LogoCube path={'assets/mongodb-logo.png'} pos={[2, 0.5, -2]}/>
+        <LogoCube path={'assets/sql-logo.png'} pos={[2, -0.5, -2]}/>
+        <LogoCube path={'assets/scala-logo.png'} pos={[4, 0.5, -2]}/>
+        <LogoCube path={'assets/java-logo.png'} pos={[4, -0.5, -2]}/>
       </Canvas>
     </>
   );
