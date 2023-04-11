@@ -30,32 +30,31 @@ function App() {
         <Background />
         <directionalLight position={[10, 10, 10]} />
         <ambientLight intensity={0.3} />
-        <Text text={'L'} pos={[-10, -0.75, -10]} rot={1} />
-        <Text text={'a'} pos={[-8, -0.25, -10]} rot={1} />
-        <Text text={'u'} pos={[-6, 0, -10]} rot={1} />
-        <Text text={'r'} pos={[-4, 0.25, -10]} rot={1} />
-        <Text text={'a'} pos={[-2, 0, -10]} rot={1} />
+        <Text text={'L'} pos={[-10, 1.25, -10]} rot={1} />
+        <Text text={'a'} pos={[-8, 1.75, -10]} rot={1} />
+        <Text text={'u'} pos={[-6, 2, -10]} rot={1} />
+        <Text text={'r'} pos={[-4, 2.25, -10]} rot={1} />
+        <Text text={'a'} pos={[-2, 2, -10]} rot={1} />
 
-        <Text text={'J'} pos={[-10, -4.25, -10]} rot={1} />
-        <Text text={'ü'} pos={[-8, -4, -10]} rot={1} />
-        <Text text={'r'} pos={[-6, -3.75, -10]} rot={1} />
-        <Text text={'g'} pos={[-4, -3.5, -10]} rot={1} />
-        <Text text={'e'} pos={[-2, -3.25, -10]} rot={1} />
-        <Text text={'n'} pos={[0, -3, -10]} rot={1} />
-        <Text text={'s'} pos={[2, -3, -10]} rot={1} />
-        <Text text={'m'} pos={[4, -3.25, -10]} rot={1} />
-        <Text text={'e'} pos={[6, -3.5, -10]} rot={1} />
-        <Text text={'i'} pos={[8, -3.75, -10]} rot={1} />
-        <Text text={'e'} pos={[10, -4, -10]} rot={1} />
-        <Text text={'r'} pos={[12, -4.25, -10]} rot={1} />
+        <Text text={'J'} pos={[-10, -2.25, -10]} rot={1} />
+        <Text text={'ü'} pos={[-8, -2, -10]} rot={1} />
+        <Text text={'r'} pos={[-6, -1.75, -10]} rot={1} />
+        <Text text={'g'} pos={[-4, -1.5, -10]} rot={1} />
+        <Text text={'e'} pos={[-2, -1.25, -10]} rot={1} />
+        <Text text={'n'} pos={[0, -1, -10]} rot={1} />
+        <Text text={'s'} pos={[2, -1, -10]} rot={1} />
+        <Text text={'m'} pos={[4, -1.25, -10]} rot={1} />
+        <Text text={'e'} pos={[6, -1.5, -10]} rot={1} />
+        <Text text={'i'} pos={[8, -1.75, -10]} rot={1} />
+        <Text text={'e'} pos={[10, -2, -10]} rot={1} />
+        <Text text={'r'} pos={[12, -2.25, -10]} rot={1} />
         <ModelViewer scale="100" modelPath={"/images/3d/Donut/donut.glb"} />
       </Canvas>
       <Canvas
-        style={{ color: '#00000', height: '400px', width: '100vw' }}
+        style={{ color: '#c25959', height: '400px', width: '100vw' }}
         onCreated={handleCanvasCreated}
         camera={{ fov: 10, position: [0, 0, 15] }}
       >
-        <Background />
         <directionalLight position={[10, 10, 10]} />
         <ambientLight intensity={0.3} />
         <LogoCube path={'assets/python-logo.svg.png'} pos={[-4, 0.5, -2]}/>

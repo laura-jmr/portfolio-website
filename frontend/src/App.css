@@ -31,28 +31,28 @@ body {
 }
 
 #menu-link-1 {
-    position: absolute;
+    position: fixed;
     top: 100px;
     left: 100px;
     z-index: 9999;
 }
 
 #menu-link-2 {
-    position: absolute;
+    position: fixed;
     top: 100px;
     right: 100px;
     z-index: 9999;
 }
 
 #menu-link-3 {
-    position: absolute;
+    position: fixed;
     bottom: 100px;
     left: 100px;
     z-index: 9999;
 }
 
 #menu-link-4 {
-    position: absolute;
+    position: fixed;
     bottom: 100px;
     right: 100px;
     z-index: 9999;
