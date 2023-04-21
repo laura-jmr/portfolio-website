@@ -69,3 +69,54 @@ body {
     height: 0vh;
     position: absolute;
 }
+
+.CV {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+}
+
+.CV-timeline {
+    width: 50vw;
+    position: relative;
+}
+
+.CV-timeline-entry {
+    font-family: 'Righteous', cursive;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    font-size: 1.5rem;
+}
+
+.CV-timeline-entry-date-span {
+    width: 40%;
+    word-break: break-all;
+}
+
+.CV-timeline-entry-right-container {
+    width: 40%;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: rgb(243, 182, 39);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.CV-timeline-entry-institute {
+    color: rgb(211, 211, 211);
+}
+
+.CV-timeline-line {
+    position: absolute;
+    background-color: rgb(211, 211, 211);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2.5px;
+    width: 5px;
+    z-index: -1;
+}

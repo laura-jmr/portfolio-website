@@ -11,6 +11,7 @@ import { OrbitControls } from "@react-three/drei";
 import React, { Suspense } from "react";
 import LogoCube from './components/LogoCube';
 import Cursor from './components/Cursor';
+import CV from './components/CV'
 
 function App() {
   const handleCanvasCreated = (canvas) => {
@@ -71,6 +72,7 @@ function App() {
         <LogoCube path={'assets/scala-logo.png'} pos={[4, 0.5, -2]}/>
         <LogoCube path={'assets/java-logo.png'} pos={[4, -0.5, -2]}/>
       </Canvas>
+      <CV/>
     </>
   );
 }
