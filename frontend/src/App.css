@@ -25,38 +25,56 @@ body {
     font-family: 'Righteous', cursive;
 }
 
+.menu-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    
+}
+
+.menu-box.hidden {
+    opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-out;
+}
+
+.menu-box ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+
 .menu-box li {
     font-size: 2rem;
     font-family: 'Righteous', cursive;
     cursor: pointer;
+    position: absolute;
+    
 }
 
 #menu-link-1 {
-    position: fixed;
     top: 100px;
     left: 100px;
-    z-index: 9999;
 }
 
 #menu-link-2 {
-    position: fixed;
     top: 100px;
     right: 100px;
-    z-index: 9999;
 }
 
 #menu-link-3 {
-    position: fixed;
     bottom: 100px;
     left: 100px;
-    z-index: 9999;
 }
 
 #menu-link-4 {
-    position: fixed;
     bottom: 100px;
     right: 100px;
-    z-index: 9999;
 }
 
 .canvas-bg {
@@ -74,6 +92,7 @@ body {
     display: flex;
     width: 100vw;
     justify-content: center;
+    background-color: rgb(156, 70, 193);
 }
 
 .CV-timeline {

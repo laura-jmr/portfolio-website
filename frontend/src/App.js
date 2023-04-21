@@ -55,7 +55,7 @@ function App() {
       </Canvas>
       <Canvas 
         className='canvas-bg'
-        style={{ color: '#c25959', height: '400px', width: '100vw' }}
+        style={{ color: '#c25959', height: '400px', width: '100vw', marginBottom: '200px'}}
         onCreated={handleCanvasCreated}
         camera={{ fov: 10, position: [0, 0, 15] }}
       >
