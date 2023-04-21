@@ -9,7 +9,8 @@ import ModelViewer from './components/ModelViewer'
 import Menu from './components/Menu'
 import { OrbitControls } from "@react-three/drei";
 import React, { Suspense } from "react";
-import LogoCube from './components/LogoCube'
+import LogoCube from './components/LogoCube';
+import Cursor from './components/Cursor';
 
 function App() {
   const handleCanvasCreated = (canvas) => {
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <>
+    <Cursor/>
     <Menu />
       <Canvas
         style={{ color: '#00000', height: '100vh', width: '100vw' }}
@@ -50,7 +52,8 @@ function App() {
         <Text text={'r'} pos={[12, -2.25, -10]} rot={1} />
         <ModelViewer scale="100" modelPath={"/images/3d/Donut/donut.glb"} />
       </Canvas>
-      <Canvas
+      <Canvas 
+        className='canvas-bg'
         style={{ color: '#c25959', height: '400px', width: '100vw' }}
         onCreated={handleCanvasCreated}
         camera={{ fov: 10, position: [0, 0, 15] }}

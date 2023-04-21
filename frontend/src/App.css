@@ -11,6 +11,7 @@ body {
     width: 100%;
     height: 100%;
     min-width: 425px;
+    cursor: none;
 }
 
 .Title-Container {
@@ -56,4 +57,15 @@ body {
     bottom: 100px;
     right: 100px;
     z-index: 9999;
+}
+
+.canvas-bg {
+    background-color: rgb(156, 70, 193);
+}
+
+.cursor {
+    z-index: 999;
+    width: 0vw;
+    height: 0vh;
+    position: absolute;
 }
