@@ -17,32 +17,45 @@ function debounce(func, wait = 20, immediate = true) {
 
 export default function Menu() {
   const [isHidden, setIsHidden] = useState(false);
-  const [lastScrollTop, setLastScrollTop] = useState(0);
+  const [linkColor, setLinkColor] = useState('#000');
 
   useEffect(() => {
     const handleScroll = debounce(() => {
       const currentScrollTop = window.scrollY;
       if (currentScrollTop > 10) {
         setIsHidden(true);
-        setTimeout(() => setIsHidden(false), 6000);
+        setTimeout(() => setIsHidden(false), 2000);
       } else {
         setIsHidden(false);
       }
-      setLastScrollTop(currentScrollTop);
     });
 
-    window.addEventListener('scroll', handleScroll);
+    const handleColorChange = debounce(() => {
+      const bodyColor = window.getComputedStyle(document.body).getPropertyValue('background-color');
+      if (bodyColor === 'rgb(156, 70, 193)') { // purple background color
+        setLinkColor('#fff');
+      } else { // white background color
+        setLinkColor('#00000');
+      }
+    }, 100);
 
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollTop]);
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleColorChange);
+    handleColorChange(); // set initial color on component mount
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleColorChange);
+    };
+  }, []);
 
   return (
     <div className={`menu-box${isHidden ? " hidden" : ""}`}>
       <ul style={{ listStyle: 'none' }}>
-        <li id='menu-link-1'>Projects</li>
-        <li id='menu-link-2'>CV</li>
-        <li id='menu-link-3'> Temp</li>
-        <li id='menu-link-4'>Temp</li>
+        <li id='menu-link-1' style={{ color: linkColor }}>Projects</li>
+        <li id='menu-link-2' style={{ color: linkColor }}>CV</li>
+        <li id='menu-link-3' style={{ color: linkColor }}> Temp</li>
+        <li id='menu-link-4' style={{ color: linkColor }}>Temp</li>
       </ul>
     </div>
   )

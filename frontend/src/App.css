@@ -43,6 +43,14 @@ body {
   transition: opacity 0.3s ease-out;
 }
 
+.menu-box.white-background {
+   color: black;
+}
+
+.menu-box.purple-background {
+    color: white;
+ }
+
 .menu-box ul {
     display: flex;
     justify-content: space-between;
