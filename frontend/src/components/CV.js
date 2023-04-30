@@ -3,7 +3,7 @@ import Timeline from './Timeline';
 
 export default function CV() {
   return (
-    <div className='CV'>
+    <div className='CV' id="cv">
       <Timeline/>
     </div>
   )

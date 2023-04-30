@@ -16,6 +16,23 @@ function debounce(func, wait = 20, immediate = true) {
 }
 
 export default function Menu() {
+
+  function handleClick() {
+    console.log("jumping to cv")
+    window.location.hash = '#cv';
+    const element = document.getElementById('cv');
+    if (element) {
+      console.log("elem cv found")
+      const offsetTop = element.offsetTop;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    } else {
+      console.log("elem cv not found")
+    }
+  }
+
   const [isHidden, setIsHidden] = useState(false);
   const [linkColor, setLinkColor] = useState('#000');
 
@@ -53,7 +70,7 @@ export default function Menu() {
     <div className={`menu-box${isHidden ? " hidden" : ""}`}>
       <ul style={{ listStyle: 'none' }}>
         <li id='menu-link-1' style={{ color: linkColor }}>Projects</li>
-        <li id='menu-link-2' style={{ color: linkColor }}>CV</li>
+        <li id='menu-link-2' style={{ color: linkColor }} onClick={handleClick} >CV</li>
         <li id='menu-link-3' style={{ color: linkColor }}> Temp</li>
         <li id='menu-link-4' style={{ color: linkColor }}>Temp</li>
       </ul>
