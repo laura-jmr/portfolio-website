@@ -68,7 +68,7 @@ function App() {
         <LogoCube path={'assets/react-logo.png'} pos={[0, -0.75, -6]} name={"react"} />
         <LogoCube path={'assets/mongodb-logo.png'} pos={[2, 0.75, -6]} name={"mongodb"} />
         <LogoCube path={'assets/sql-logo.png'} pos={[2, -0.75, -6]} name={"sql"} />
-        <LogoCube path={'assets/scala-logo.png'} pos={[4, 0.75, -6]} name={"scala"} />
+        <LogoCube path={'assets/scala-logo.jpg'} pos={[4, 0.75, -6]} name={"scala"} />
         <LogoCube path={'assets/java-logo.png'} pos={[4, -0.75, -6]} name={"java"} />
       </Canvas>
       <CV />
