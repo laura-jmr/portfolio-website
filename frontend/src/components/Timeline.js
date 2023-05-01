@@ -1,7 +1,12 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import TimelineEntry from './TimelineEntry';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Timeline() {
+  useEffect(() => {
+    AOS.init();
+}, [])
   const timelineEntries = [
     {
       id: 1,
@@ -36,7 +41,7 @@ export default function Timeline() {
   ];
 
   return (
-    <div className='CV-timeline'>
+    <div data-aos="fade-up" className='CV-timeline'>
       {timelineEntries.map((entry) => (
         <TimelineEntry
           key={entry.id}

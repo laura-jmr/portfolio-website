@@ -1,8 +1,13 @@
-import React from 'react'
+import React,{useEffect} from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function TimelineEntry({ dateSpan, institute, description }) {
+    useEffect(() => {
+        AOS.init();
+    }, [])
     return (
-        <div className="CV-timeline-entry">
+        <div data-aos="fade-up" className="CV-timeline-entry">
             <div className="CV-timeline-entry-date-span">{dateSpan}</div>
             <span className='dot'></span>
             <div className='CV-timeline-entry-right-container'>

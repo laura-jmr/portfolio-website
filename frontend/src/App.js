@@ -13,6 +13,7 @@ import LogoCube from './components/LogoCube';
 import Cursor from './components/Cursor';
 import CV from './components/CV';
 
+
 function App() {
   const handleCanvasCreated = (canvas) => {
     console.log(canvas.offsetWidth, canvas.offsetHeight);

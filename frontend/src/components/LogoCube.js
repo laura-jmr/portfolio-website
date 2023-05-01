@@ -36,7 +36,7 @@ export default function LogoCube( {path, pos, name} ) {
         </mesh>
         <mesh position={textPos} rotation={[0, 0, 0]}>
             <textGeometry args={[name, textOpt]} />
-            <meshBasicMaterial attach='material' color={'yellow'}/>
+            <meshBasicMaterial attach='material' color={'black'}/>
         </mesh>
         </>
     )
