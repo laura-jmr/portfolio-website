@@ -19,8 +19,13 @@ export default function LogoCube( {path, pos, name} ) {
     const textOpt = {
         font,
         size: 0.1,
-        height: 0.1
+        height: 0.01
     };
+
+    const textPos = [...pos];
+    textPos[2] = pos[2] + 1
+    textPos[1] = pos[1] - 0.8
+    textPos[0] = pos[0] - 0.25
     return (
         <>
         <mesh position={pos} ref={mesh}>
@@ -29,7 +34,7 @@ export default function LogoCube( {path, pos, name} ) {
             <meshStandardMaterial color={0xffffff} map={texture} attach="material" />
             
         </mesh>
-        <mesh position={pos} rotation={[0, 0, 0]}>
+        <mesh position={textPos} rotation={[0, 0, 0]}>
             <textGeometry args={[name, textOpt]} />
             <meshBasicMaterial attach='material' color={'yellow'}/>
         </mesh>
