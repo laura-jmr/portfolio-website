@@ -66,27 +66,31 @@ body {
 }
 
 #menu-link-1 {
+    transition: color 1s ease-in-out;
     top: 100px;
     left: 100px;
 }
 
 #menu-link-2 {
+    transition: color 1s ease-in-out;
     top: 100px;
     right: 100px;
 }
 
 #menu-link-3 {
+    transition: color 1s ease-in-out;
     bottom: 100px;
     left: 100px;
 }
 
 #menu-link-4 {
+    transition: color 1s ease-in-out;
     bottom: 100px;
     right: 100px;
 }
 
 .canvas-bg {
-    background-color: rgb(156, 70, 193);
+    /*background-color: rgb(156, 70, 193);*/
 }
 
 .cursor {
@@ -100,7 +104,7 @@ body {
     display: flex;
     width: 100vw;
     justify-content: center;
-    background-color: rgb(156, 70, 193);
+    /*background-color: rgb(156, 70, 193);*/
     padding-top: 200px;
 }
 
@@ -148,4 +152,12 @@ body {
     margin-left: -2.5px;
     width: 5px;
     z-index: 1;
+}
+
+body {
+    background-image: url("./assets/background-peaks.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 100vh;
+    
 }

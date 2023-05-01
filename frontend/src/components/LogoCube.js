@@ -1,8 +1,11 @@
 import React, { useRef } from 'react'
 import { useFrame, useLoader } from '@react-three/fiber'
 import { TextureLoader } from 'three/src/loaders/TextureLoader.js';
+import bungee from '../assets/Bungee_Regular.json';
+import { FontLoader } from 'three/examples/jsm/loaders/FontLoader';
+import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry';
 
-export default function LogoCube( {path, pos} ) {
+export default function LogoCube( {path, pos, name} ) {
     const texture = useLoader(TextureLoader,
         require(`../${path}`))
     const mesh = useRef()
@@ -11,12 +14,25 @@ export default function LogoCube( {path, pos} ) {
         mesh.current.rotation.y += 0.003
         mesh.current.rotation.z += 0.003
     })
+
+    const font = new FontLoader().parse(bungee);
+    const textOpt = {
+        font,
+        size: 0.1,
+        height: 0.1
+    };
     return (
+        <>
         <mesh position={pos} ref={mesh}>
             <boxGeometry args={[0.75, 0.75, 0.75]} />
             <meshNormalMaterial attach='material'/>
             <meshStandardMaterial color={0xffffff} map={texture} attach="material" />
             
         </mesh>
+        <mesh position={pos} rotation={[0, 0, 0]}>
+            <textGeometry args={[name, textOpt]} />
+            <meshBasicMaterial attach='material' color={'yellow'}/>
+        </mesh>
+        </>
     )
 }

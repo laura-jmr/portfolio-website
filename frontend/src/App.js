@@ -11,7 +11,7 @@ import { OrbitControls } from "@react-three/drei";
 import React, { Suspense } from "react";
 import LogoCube from './components/LogoCube';
 import Cursor from './components/Cursor';
-import CV from './components/CV'
+import CV from './components/CV';
 
 function App() {
   const handleCanvasCreated = (canvas) => {
@@ -23,14 +23,13 @@ function App() {
 
   return (
     <>
-    <Cursor/>
-    <Menu />
+      <Cursor />
+      <Menu />
       <Canvas
         style={{ color: '#00000', height: '100vh', width: '100vw' }}
         onCreated={handleCanvasCreated}
         camera={{ fov: 30, position: [0, 0, 30] }}
       >
-        <Background />
         <directionalLight position={[10, 10, 10]} />
         <ambientLight intensity={0.3} />
         <Text text={'L'} pos={[-10, 1.25, -10]} rot={1} />
@@ -53,26 +52,26 @@ function App() {
         <Text text={'r'} pos={[12, -2.25, -10]} rot={1} />
         <ModelViewer scale="100" modelPath={"/images/3d/Donut/donut.glb"} />
       </Canvas>
-      <Canvas 
+      <Canvas
         className='canvas-bg'
-        style={{ color: '#c25959', height: '400px', width: '100vw'}}
+        style={{ color: '#c25959', height: '400px', width: '100vw' }}
         onCreated={handleCanvasCreated}
         camera={{ fov: 10, position: [0, 0, 15] }}
       >
         <directionalLight position={[10, 10, 10]} />
         <ambientLight intensity={0.3} />
-        <LogoCube path={'assets/python-logo.svg.png'} pos={[-4, 0.5, -2]}/>
-        <LogoCube path={'assets/numpy-logo.png'} pos={[-4, -0.5, -2]}/>
-        <LogoCube path={'assets/html-logo.png'} pos={[-2, 0.5, -2]}/>
-        <LogoCube path={'assets/css-logo.png'} pos={[-2, -0.5, -2]}/>
-        <LogoCube path={'assets/nodejs-logo.png'} pos={[0, 0.5, -2]}/>
-        <LogoCube path={'assets/react-logo.png'} pos={[0, -0.5, -2]}/>
-        <LogoCube path={'assets/mongodb-logo.png'} pos={[2, 0.5, -2]}/>
-        <LogoCube path={'assets/sql-logo.png'} pos={[2, -0.5, -2]}/>
-        <LogoCube path={'assets/scala-logo.png'} pos={[4, 0.5, -2]}/>
-        <LogoCube path={'assets/java-logo.png'} pos={[4, -0.5, -2]}/>
+        <LogoCube path={'assets/python-logo.svg.png'} pos={[-4, 0.5, -2]} name={"python"} />
+        <LogoCube path={'assets/numpy-logo.png'} pos={[-4, -0.5, -2]} name={"numpy"} />
+        <LogoCube path={'assets/html-logo.png'} pos={[-2, 0.5, -2]} name={"html"} />
+        <LogoCube path={'assets/css-logo.png'} pos={[-2, -0.5, -2]} name={"css"} />
+        <LogoCube path={'assets/nodejs-logo.png'} pos={[0, 0.5, -2]} name={"nodejs"} />
+        <LogoCube path={'assets/react-logo.png'} pos={[0, -0.5, -2]} name={"react"} />
+        <LogoCube path={'assets/mongodb-logo.png'} pos={[2, 0.5, -2]} name={"mongodb"} />
+        <LogoCube path={'assets/sql-logo.png'} pos={[2, -0.5, -2]} name={"sql"} />
+        <LogoCube path={'assets/scala-logo.png'} pos={[4, 0.5, -2]} name={"scala"} />
+        <LogoCube path={'assets/java-logo.png'} pos={[4, -0.5, -2]} name={"java"} />
       </Canvas>
-      <CV/>
+      <CV />
     </>
   );
 }
