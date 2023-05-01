@@ -12,7 +12,8 @@ import React, { Suspense } from "react";
 import LogoCube from './components/LogoCube';
 import Cursor from './components/Cursor';
 import CV from './components/CV';
-
+import Footer from './components/Footer';
+import Scrollbar from './components/Scrollbar'
 
 function App() {
   const handleCanvasCreated = (canvas) => {
@@ -25,6 +26,7 @@ function App() {
   return (
     <>
       <Cursor />
+      <Scrollbar/>
       <Menu />
       <Canvas
         style={{ color: '#00000', height: '100vh', width: '100vw' }}
@@ -73,6 +75,7 @@ function App() {
         <LogoCube path={'assets/java-logo.png'} pos={[4, -0.75, -6]} name={"java"} />
       </Canvas>
       <CV />
+      <Footer/>
     </>
   );
 }

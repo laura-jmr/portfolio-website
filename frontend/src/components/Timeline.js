@@ -41,7 +41,7 @@ export default function Timeline() {
   ];
 
   return (
-    <div data-aos="fade-up" className='CV-timeline'>
+    <div data-aos="fade-up" data-aos-duration="2000" className='CV-timeline'>
       {timelineEntries.map((entry) => (
         <TimelineEntry
           key={entry.id}

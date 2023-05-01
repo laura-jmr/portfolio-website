@@ -161,3 +161,62 @@ body {
     background-position: center 100vh;
     
 }
+
+.footer {
+    width: 100vw;
+    height: 200px;
+    background-color: rgb(62, 12, 142);
+    margin-top: 50px;
+}
+
+
+  .scrollbar-container {
+    position: fixed;
+    top: 0;
+    right: 20px;
+    width: 10px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .scrollbar-dots {
+    position: relative;
+    width: 2px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  @keyframes dot-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .scrollbar-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000;
+    opacity: 0.5;
+    margin-bottom: 15px;
+  }
+  
+  .scrollbar-dot-active {
+    animation: dot-pulse 1s ease-in-out infinite;
+    opacity: 1;
+  }
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  

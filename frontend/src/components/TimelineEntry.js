@@ -7,7 +7,7 @@ export default function TimelineEntry({ dateSpan, institute, description }) {
         AOS.init();
     }, [])
     return (
-        <div data-aos="fade-up" className="CV-timeline-entry">
+        <div data-aos="fade-up" data-aos-duration="1000" className="CV-timeline-entry">
             <div className="CV-timeline-entry-date-span">{dateSpan}</div>
             <span className='dot'></span>
             <div className='CV-timeline-entry-right-container'>
