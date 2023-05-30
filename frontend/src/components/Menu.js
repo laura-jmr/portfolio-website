@@ -17,7 +17,7 @@ function debounce(func, wait = 20, immediate = true) {
 
 export default function Menu() {
 
-  function handleClick() {
+  function handleClickCV() {
     console.log("jumping to cv")
     window.location.hash = '#cv';
     const element = document.getElementById('cv');
@@ -25,11 +25,59 @@ export default function Menu() {
       console.log("elem cv found")
       const offsetTop = element.offsetTop;
       window.scrollTo({
-        top: offsetTop,
+        top: offsetTop + 250,
         behavior: 'smooth'
       });
     } else {
       console.log("elem cv not found")
+    }
+  }
+
+  function handleClickSkills() {
+    console.log("jumping to skills")
+    window.location.hash = '#skills';
+    const element = document.getElementById('skills');
+    if (element) {
+      console.log("elem skills found")
+      const offsetTop = element.offsetTop;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    } else {
+      console.log("elem skills not found")
+    }
+  }
+
+  function handleClickProjects() {
+    console.log("jumping to projects")
+    window.location.hash = '#projects';
+    const element = document.getElementById('projects');
+    if (element) {
+      console.log("elem projects found")
+      const offsetTop = element.offsetTop;
+      window.scrollTo({
+        top: offsetTop + 250,
+        behavior: 'smooth'
+      });
+    } else {
+      console.log("elem projects not found")
+    }
+  }
+
+  function handleClickContact() {
+    console.log("jumping to contact")
+    window.location.hash = '#contact';
+    const element = document.getElementById('contact');
+    if (element) {
+      console.log("elem contact found")
+      const offsetTop = element.offsetTop;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    } else {
+      console.log("elem contact not found")
     }
   }
 
@@ -60,13 +108,13 @@ export default function Menu() {
       setIsHidden(false);
     }
 
-    if (currentScrollTop >= 110) {
+    if (currentScrollTop >= 70) {
       setLinkColorBottom('#fff');
     } else {
       setLinkColorBottom('#000');
     }
 
-    if (currentScrollTop >= (window.innerHeight - 110)) {
+    if (currentScrollTop >= (window.innerHeight - 170)) {
       setLinkColorTop('#fff');
     } else {
       setLinkColorTop('#000');
@@ -89,10 +137,10 @@ export default function Menu() {
   return (
     <div className={`menu-box${isHidden ? " hidden" : ""}`}>
       <ul style={{ listStyle: 'none' }}>
-        <li id='menu-link-1' style={{ color: linkColorTop }}>Projects</li>
-        <li id='menu-link-2' style={{ color: linkColorTop }} onClick={handleClick} >CV</li>
-        <li id='menu-link-3' style={{ color: linkColorBottom }}> Temp</li>
-        <li id='menu-link-4' style={{ color: linkColorBottom }}>Temp</li>
+        <li id='menu-link-1' style={{ color: linkColorTop }} onClick={handleClickSkills}>Skills</li>
+        <li id='menu-link-2' style={{ color: linkColorTop }} onClick={handleClickCV} >CV</li>
+        <li id='menu-link-3' style={{ color: linkColorBottom }} onClick={handleClickProjects}> Projects</li>
+        <li id='menu-link-4' style={{ color: linkColorBottom }} onClick={handleClickContact}>Contact</li>
       </ul>
     </div>
   )

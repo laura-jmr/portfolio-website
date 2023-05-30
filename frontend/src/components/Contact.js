@@ -6,7 +6,7 @@ import CurvedText from './CurvedText';
 
 export default function Contact() {
   return (
-    <div className='contact-container'>
+    <div className='contact-container' id='contact'>
       <Canvas
         style={{ color: '#00000', height: '100vh', width: '100vw', zIndex: "998" }}
         camera={{ fov: 30, position: [0, 0, 30] }}

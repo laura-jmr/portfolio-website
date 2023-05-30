@@ -74,7 +74,7 @@ function App() {
         <ModelViewer scale={3} modelPath={"/images/3d/Donut/donut.glb"} position={[8, -5, -15]} />
       </Canvas>
       <Canvas
-        className='canvas-bg'
+        className='canvas-bg' id='skills'
         style={{ color: '#c25959', height: '500px', width: '100vw', marginBottom: "200px" }}
         onCreated={handleCanvasCreated}
         camera={{ fov: 10, position: [0, 0, 15] }}
@@ -101,7 +101,7 @@ function App() {
         <LogoCube path={'assets/java-logo.png'} pos={[4, -1.25, -6]} name={"java"} />
       </Canvas>
       <Canvas
-        className='canvas-bg'
+        className='canvas-bg' id="cv"
         style={{ color: '#c25959', height: '500px', width: '100vw' }}
         onCreated={handleCanvasCreated}
         camera={{ fov: 10, position: [0, 0, 15] }}
@@ -113,7 +113,7 @@ function App() {
       </Canvas>
       <CV />
       <Canvas
-        className='canvas-bg'
+        className='canvas-bg' id='projects'
         style={{ color: '#c25959', height: '500px', width: '100vw' }}
         onCreated={handleCanvasCreated}
         camera={{ fov: 10, position: [0, 0, 15] }}
