@@ -120,14 +120,14 @@ function App() {
       >
         <directionalLight position={[10, 10, 10]} />
         <ambientLight intensity={0.3} />
-        <CurvedText text="P" pos={[-1.75, -1.35, -10]} rot={[-0.1, 0, 0.6]} />
-        <CurvedText text="r" pos={[-1.15, -1.15, -10]} rot={[-0.1, 0, 0.4]} />
-        <CurvedText text="o" pos={[-0.75, -0.85, -10]} rot={[-0.1, 0, 0.2]} />
+        <CurvedText text="P" pos={[-1.75, -1.05, -10]} rot={[-0.1, 0, 0.6]} />
+        <CurvedText text="r" pos={[-1.25, -0.9, -10]} rot={[-0.1, 0, 0.4]} />
+        <CurvedText text="o" pos={[-0.75, -0.75, -10]} rot={[-0.1, 0, 0.2]} />
         <CurvedText text="j" pos={[-0.25, -0.6, -10]} rot={[-0.1, 0, 0]} />
         <CurvedText text="e" pos={[0.25, -0.6, -10]} rot={[-0.1, 0, 0]} />
-        <CurvedText text="c" pos={[0.75, -0.85, -10]} rot={[-0.1, 0, -0.2]} />
-        <CurvedText text="t" pos={[1.15, -1.15, -10]} rot={[-0.1, 0, -0.4]} />
-        <CurvedText text="s" pos={[1.75, -1.35, -10]} rot={[-0.1, 0, -0.6]} />
+        <CurvedText text="c" pos={[0.75, -0.75, -10]} rot={[-0.1, 0, -0.2]} />
+        <CurvedText text="t" pos={[1.25, -0.9, -10]} rot={[-0.1, 0, -0.4]} />
+        <CurvedText text="s" pos={[1.75, -1.05, -10]} rot={[-0.1, 0, -0.6]} />
       </Canvas>
       <Projects/>
       <Contact/>

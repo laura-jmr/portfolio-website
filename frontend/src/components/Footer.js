@@ -7,6 +7,13 @@ export default function Footer() {
         AOS.init();
     }, [])
   return (
-    <div className='footer'>Footer</div>
+    <div className='footer'>
+      <div className='footer-terms-container'>
+        <span>&copy; Laura Jürgensmeier 2023</span>
+        <a>Terms</a>
+        <a>Privacy</a>
+        <a>Imprint</a>
+      </div>
+    </div>
   )
 }

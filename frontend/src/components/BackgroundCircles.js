@@ -14,6 +14,8 @@ export default function BackgroundCircles() {
             <span className='background-rec-3'></span>
             <span className='background-dot-4'></span>
             <span className='background-rec-4'></span>
+            <span className='background-dot-5'></span>
+            <span className='background-rec-5'></span>
         </div>   
         )
 }
